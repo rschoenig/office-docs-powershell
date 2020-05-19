@@ -1,25 +1,26 @@
 ---
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
-online version: https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/remove-complianceboundary
+online version: https://docs.microsoft.com/powershell/module/exchange/new-complianceboundary
 applicable: Office 365 Security & Compliance Center
-title: Set-ComplianceBoundary
+title: New-ComplianceBoundary
 schema: 2.0.0
 monikerRange: "o365scc-ps"
 ---
 
-# Set-ComplianceBoundary
+# New-ComplianceBoundary
 
 ## SYNOPSIS
 This cmdlet is available only in the Office 365 Security & Compliance Center. For more information, see [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell).
 
-Use the Set-ComplianceBoundary cmdlet to modify compliance boundaries in your organization.
+Use the New-ComplianceBoundary cmdlet to create compliance boundaries in your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://docs.microsoft.com/powershell/exchange/exchange-server/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
 ```
-Set-ComplianceBoundary [-Comment <String>] [-Identity] <ComplianceRuleIdParameter> [<CommonParameters>]
+New-ComplianceBoundary [-Name] <String> -CustomRecipientFilter <String> [-Comment <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,17 +37,11 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## PARAMETERS
 
-### -Identity
-The Identity parameter specifies the compliance boundary that you want to modify. You can use any value that uniquely identifies the compliance boundary. For example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
+### -Name
+The Name parameter specifies a unique name for the compliance boundary. If the value contains spaces, enclose the value in quotation marks (").
 
 ```yaml
-Type: ComplianceRuleIdParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Office 365 Security & Compliance Center
@@ -54,7 +49,23 @@ Applicable: Office 365 Security & Compliance Center
 Required: True
 Position: 0
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CustomRecipientFilter
+The Filter parameter indicates the OPath filter used to filter recipients (for example, Department -eq 'Finance').
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Office 365 Security & Compliance Center
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
