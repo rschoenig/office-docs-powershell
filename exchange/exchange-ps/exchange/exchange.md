@@ -2037,6 +2037,10 @@ Exchange PowerShell is built on Windows PowerShell technology and provides a pow
 
 ### [Get-EXORecipientPermission](Get-EXORecipientPermission.md)
 
+### Get-UserBriefingConfig](Get-UserBriefingConfig.md)
+
+### Set-UserBriefingConfig](Set-UserBriefingConfig.md)
+
 ## reporting Cmdlets
 ### [Get-ConnectionByClientTypeDetailReport](Get-ConnectionByClientTypeDetailReport.md)
 
